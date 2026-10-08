@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sam Gao — AI maturity, measured</title>
+<meta name="description" content="Sam Gao (高山) helps organizations find out how mature their AI really is, and how to make it better. Founder of Maturity Labs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#17212B;
+    --soft:#55606B;
+    --paper:#FFFFFF;
+    --rule:#E3E1DD;
+    --accent:#7A2E2E;
+    --tint:#F4F1EE;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:400 19px/1.65 Newsreader,Georgia,serif}
+  a{color:var(--accent);text-underline-offset:3px}
+  a:hover{color:var(--ink)}
+  a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+  .page{max-width:980px;margin:0 auto;padding:0 28px}
+  .meta{font-family:"Public Sans",system-ui,sans-serif}
+
+  header{display:flex;justify-content:space-between;align-items:baseline;padding:32px 0 0}
+  header .home{font-family:"Public Sans",sans-serif;font-weight:600;font-size:15px;color:var(--ink);text-decoration:none}
+  header nav a{font-family:"Public Sans",sans-serif;font-size:15px;color:var(--ink);text-decoration:none;margin-left:24px}
+  header nav a:hover{text-decoration:underline}
+
+  .hero{padding:96px 0 88px;border-bottom:1px solid var(--rule)}
+  .name{font-size:clamp(56px,10vw,112px);line-height:.95;font-weight:500;letter-spacing:-.025em;margin:0 0 36px;display:flex;align-items:baseline;gap:.28em;flex-wrap:wrap}
+  .name .cn{font-family:"Songti SC","STSong","SimSun","Noto Serif SC",serif;font-weight:400;font-size:.46em;color:var(--soft);letter-spacing:.08em}
+  .hero p{font-size:clamp(22px,2.6vw,28px);line-height:1.4;max-width:30ch;margin:0}
+  .hero p a{white-space:nowrap}
+
+  section.row{display:grid;grid-template-columns:200px 1fr;gap:48px;padding:56px 0;border-bottom:1px solid var(--rule)}
+  section.row > h2{font-size:22px;font-weight:500;margin:0;line-height:1.3}
+  .body{max-width:62ch}
+  .body p{margin:0 0 1em}
+  .body p:last-child{margin-bottom:0}
+
+  .now{list-style:none;margin:0;padding:0}
+  .now li{padding:0 0 16px;margin:0 0 16px;border-bottom:1px solid var(--rule)}
+  .now li:last-child{border:0;margin:0;padding:0}
+  .now .k{display:block;font-family:"Public Sans",sans-serif;font-size:14px;color:var(--soft);margin-bottom:2px}
+
+  .creds{font-family:"Public Sans",sans-serif;font-size:15.5px;line-height:1.55;color:var(--soft);margin:24px 0 0;padding:0;list-style:none}
+  .creds li{padding:6px 0 6px 18px;position:relative}
+  .creds li::before{content:"";position:absolute;left:0;top:15px;width:8px;height:1px;background:var(--accent)}
+
+  .talks{list-style:none;margin:0 0 20px;padding:0;counter-reset:t}
+  .talks li{margin:0 0 18px}
+  .talks strong{font-weight:500;font-size:21px;display:block;line-height:1.3}
+  .talks span{color:var(--soft);font-size:17px}
+
+  .book{background:var(--tint);padding:28px 30px;border-left:3px solid var(--accent)}
+  .book .t{font-size:26px;font-weight:500;line-height:1.2;margin:0 0 4px}
+  .book .cn{font-family:"Songti SC","STSong","SimSun","Noto Serif SC",serif;color:var(--soft);font-size:18px;margin:0 0 16px}
+  .book p{font-size:17.5px}
+
+  .mail{font-size:clamp(26px,3.4vw,36px);font-weight:500}
+
+  footer{padding:32px 0 56px;font-family:"Public Sans",sans-serif;font-size:14px;color:var(--soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer a{color:var(--soft)}
+
+  @media (prefers-reduced-motion:no-preference){
+    .name,.hero p{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+    .hero p{animation-delay:.12s}
+    @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  }
+  @media (max-width:760px){
+    section.row{grid-template-columns:1fr;gap:16px;padding:44px 0}
+    .hero{padding:64px 0 56px}
+    header nav a:not(:last-child){display:none}
+  }
+  @media (max-width:480px){
+    .page{padding:0 16px}
+    body{font-size:18px}
+    .book{padding:22px 20px}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <a class="home" href="#top">samgao.ai</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#book">Book</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1 class="name">Sam Gao <span class="cn" lang="zh">高山</span></h1>
+      <p>I help organizations find out how mature their AI really is, and how to make it better. Founder of <a href="https://maturitylabs.com">Maturity Labs</a>.</p>
+    </section>
+
+    <section class="row" id="now">
+      <h2>Now</h2>
+      <ul class="now body">
+        <li><span class="k">Work</span>Leading AI maturity appraisals and AI transformation programs at Maturity Labs.</li>
+        <li><span class="k">Writing</span>Finishing a book on AI transformation for software companies.</li>
+        <li><span class="k">Speaking</span>Talking with leadership teams about why AI programs stall, and how to measure the ones that work.</li>
+      </ul>
+    </section>
+
+    <section class="row" id="about">
+      <h2>About</h2>
+      <div class="body">
+        <p>I spent my first ten years writing software. I spent the next twenty helping organizations improve how they build it, leading more than 300 CMMI appraisals for companies ranging from fast-growing software firms to national banks.</p>
+        <p>Along the way I co-founded several companies, including Ambow Education, which later listed on the New York Stock Exchange. For the past five years I have worked almost entirely on AI: building AI agents, coaching teams through adoption, and helping write the standard that measures it.</p>
+        <p>My view is simple. AI transformation rarely fails because of the tools. It fails on organization design and measurement. That is where I focus.</p>
+        <ul class="creds">
+          <li>CMMI AIM Lead Appraiser and CMMI High Maturity Lead Appraiser</li>
+          <li>Team leader in ISACA's AI Working Group, which wrote and piloted CMMI AI Maturity (AIM)</li>
+          <li>ISACA-certified instructor who trains lead appraisers and instructors</li>
+          <li>Former Vice Chair, CMMI Institute Partner Advisory Board</li>
+          <li>USTC; MS, Northeastern University; MBA, Indiana University Kelley School of Business</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="row" id="speaking">
+      <h2>Speaking</h2>
+      <div class="body">
+        <ol class="talks">
+          <li><strong>Beyond AI tools</strong><span>How organizations restructure, measure and mature for enterprise AI.</span></li>
+          <li><strong>What an AI maturity appraisal actually finds</strong><span>The gaps that show up again and again, and which ones matter most.</span></li>
+          <li><strong>Measuring AI in software teams</strong><span>How to tell real productivity gains from activity, with numbers leaders can trust.</span></li>
+        </ol>
+        <p>For conferences, executive sessions and internal leadership offsites. To invite me, email <a href="mailto:sam@maturitylabs.com?subject=Speaking%20invitation">sam@maturitylabs.com</a>.</p>
+      </div>
+    </section>
+
+    <section class="row" id="book">
+      <h2>Book</h2>
+      <div class="body">
+        <div class="book">
+          <p class="t">AI Transformation for Software Companies</p>
+          <p class="cn" lang="zh">软件企业AI转型：道法术器人</p>
+          <p>A practical guide for software executives and engineering leaders. It covers five layers of change: philosophy, governance, execution, tooling and people. It draws on more than 300 enterprise engagements. In progress.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="row" id="writing">
+      <h2>Writing</h2>
+      <div class="body">
+        <p>A newsletter on AI maturity is on the way: what appraisals reveal, what measurement shows, and what leaders can do next. To get the first issue, <a href="mailto:sam@maturitylabs.com?subject=Newsletter">send me a note</a>.</p>
+      </div>
+    </section>
+
+    <section class="row" id="contact">
+      <h2>Contact</h2>
+      <div class="body">
+        <a class="mail" href="mailto:sam@maturitylabs.com">sam@maturitylabs.com</a>
+        <p style="margin-top:14px">Chicago and Beijing.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Sam Gao</span>
+    <span>CMMI® is a registered trademark of ISACA.</span>
+  </footer>
+</div>
+</body>
+</html>
